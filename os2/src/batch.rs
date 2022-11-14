@@ -135,7 +135,7 @@ pub fn run_next_app() -> ! {
         __restore(KERNEL_STACK.push_context(TrapContext::app_init_context(
             APP_BASE_ADDRESS,
             USER_STACK.get_sp(),
-        )) as *const _ as usize);
+        )) as *const _ as usize); 
     }
     panic!("Unreachable in batch::run_current_app!");
 }
